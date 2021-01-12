@@ -1,5 +1,8 @@
-let app = require('app');
+let express = require('express')
+frontPageRoute = express.Router()
 
-frontPageRoute = (req, res) => {
-    res.render('frontPage')
-}
+frontPageRoute.get('/', (req, res) => {
+    res.render('views/frontPage')
+})
+
+module.exports = frontPageRoute
