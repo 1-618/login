@@ -1,9 +1,30 @@
 <%- include('header-partial'); %>
 <body>
-<h1>books</h1>
+
 <div class="form-outline form-white">
+    <label for="formWhite">Get book by ISBN</label>
     <input type="text" id="formWhite" class="form-control" />
-    <label class="form-label" for="formWhite">Example label</label>
+    <button formaction="/add" type="submit" >Submit</button>
 </div>
+
+<div class="form-outline form-white">
+    <label for="formWhite">Get book by title</label>
+    <input type="text" id="formWhite" class="form-control" />
+    <button formaction="/add" type="submit" >Submit</button>
+</div>
+
+<div class="form-outline form-white">
+    <label for="formWhite">Get book by Author</label>
+    <input type="text" id="formWhite" class="form-control" />
+    <button formaction="/add" type="submit" >Submit</button>
+</div>
+
+<div class="form-outline form-white">
+    <label for="formWhite">Get book by publisher</label>
+    <input type="text" id="formWhite" class="form-control" />
+    <button formaction="/add" type="submit" >Submit</button>
+</div>
+
+
 </body>
 <%- include('footer-partial'); %>

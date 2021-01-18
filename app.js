@@ -1,4 +1,5 @@
 //Express module
+let db = require('./models/db');
 let express = require('express');
 let app = express();
 
@@ -12,16 +13,21 @@ app.set('views', __dirname + '/views');
 
 //Express Router to route requests
 let router = express.Router();
-let frontPageRoute = require('./routes/front-page-router');
-let albumsRoute = require('./routes/albums-page-router');
-let moviesRoute = require('./routes/movies-page-router');
-let booksRoute = require('./routes/books-page-router');
+app.use(router);
 
-//Homepage endpoint
-app.use(frontPageRoute);
+//test it to make sure everything is working
+app.get('/', (req, res) => {
+    res.render('books-page')
+})
 
 
-//Routing to the routes at login endpoint
-app.use(albumsRoute);
+app.get('/add-a-book', (req, res) => {
+    res.render('Add-new-book');
+    res.redirect('/')
+});
+
+router.post('/add', (req, res) => {
+    console.log(req.body);
+})
 
 module.exports = app;

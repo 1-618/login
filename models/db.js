@@ -5,7 +5,7 @@ let MongoClient = require('mongodb').MongoClient;
 const url = 'mongodb://localhost:27017';
 
 //Database Name
-const dbName = 'loginDB';
+const dbName = 'libraryDB';
 
 //Use connect method to connect to the server
 MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
